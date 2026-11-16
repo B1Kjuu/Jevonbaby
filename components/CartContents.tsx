@@ -82,8 +82,13 @@ export default function CartContents({ onNavigate }: { onNavigate?: () => void }
           <span className="tabular-nums">{money(total)}</span>
         </p>
         <p className="mt-1 text-sm text-ink-soft">Shipping and final price are confirmed at checkout.</p>
-        <a href={checkoutUrl(lines)} className="btn btn-primary mt-4 w-full">
-          Checkout on jevonbaby.com
+        <a
+          href={checkoutUrl(lines)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary mt-4 w-full"
+        >
+          Checkout securely on jevonbaby.com
         </a>
       </div>
     </>

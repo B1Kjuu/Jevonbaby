@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { categories, syncedAt } from "@/lib/catalog";
-import { STORE_URL } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -26,26 +25,26 @@ export default function Footer() {
           <p className="text-sm font-semibold uppercase tracking-wide text-white/60">Help</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
-              <a href={`${STORE_URL}/pages/faqs`} className="hover:underline">
+              <Link href="/help#faqs" className="hover:underline">
                 FAQs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href={`${STORE_URL}/pages/contact`} className="hover:underline">
+              <Link href="/help#contact" className="hover:underline">
                 Contact
-              </a>
+              </Link>
             </li>
             <li>
-              <a href={`${STORE_URL}/pages/about-us`} className="hover:underline">
+              <Link href="/help#story" className="hover:underline">
                 Our story
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
       </div>
       <div className="border-t border-white/15">
         <p className="wrap py-4 text-xs text-white/60">
-          Prices in SGD, last synced from the store on {syncedAt}. Checkout is completed on jevonbaby.com.
+          Prices in SGD, last synced from the store on {syncedAt}. Checkout is completed securely on jevonbaby.com.
         </p>
       </div>
     </footer>
